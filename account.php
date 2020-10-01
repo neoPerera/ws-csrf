@@ -6,8 +6,7 @@
 
 session_start();
 if (isset($_SESSION['id'])) {
-    # code...
-    echo $_SESSION['id'] . "<br>";
+    echo "Session id is". $_SESSION['id'] . "<br>";
 } else {
     header('location: index.php');
 }
@@ -27,24 +26,22 @@ if (isset($_SESSION['id'])) {
 </head>
 
 <body>
-    <form action="token.php" method="post">
-        <p id="div1"></p>
-        <p>Enter name:</p>
-        <input type="text" name="uname" id="u1">
-        <input type="submit" value="OK" name="ok">
-        
+    <div>
+        <form action="token.php" method="post">
+            <p id="div1"></p>
+            <p>Enter name:</p>
+            <input type="text" name="uname" id="u1">
+            <input type="submit" value="OK" name="ok">
 
-        
-
-    </form>
-
+        </form>
+    </div>
     <script>
             $(document).ready(function() {
 
                 $("#div1").load("getToken.php #t1");
 
             });
-        </script>
+    </script>
 </body>
 
 </html>
