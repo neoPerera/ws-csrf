@@ -1,7 +1,5 @@
 <?php
 if (isset($_POST['uname'])) {
-
-
     include 'conn.php';
     session_start();
 
@@ -18,7 +16,7 @@ if (isset($_POST['uname'])) {
         {
      
                 $name = $_POST['uname'];
-                echo "name changed succesfully<br/>";
+                echo "Name successfully changed.<br/>";
                 echo "new name is  $name !";
              
         }
@@ -35,9 +33,6 @@ if (isset($_POST['uname'])) {
 } else {
     header("location: account.php");
 }
-
-
-
 ?>
 
 
@@ -50,6 +45,6 @@ if (isset($_POST['uname'])) {
     <title>Document</title>
 </head>
 <body>
-    <a href="logout.php"><h1>LogOut</h1></a>
+    <a href="logout.php" style="color:red;"><h1>LogOut</h1></a>
 </body>
 </html>
